@@ -1,0 +1,10 @@
+date,produit,categorie,quantite,prix_unitaire,ville,montant
+2026-01-05,Clavier,Informatique,2.0,45.0,Paris,90.0
+2026-01-05,Souris,Informatique,5.0,15.0,Paris,75.0
+2026-01-06,Ecran,Informatique,1.0,180.0,Lyon,180.0
+2026-01-06,Chaise,Mobilier,3.0,90.0,Lyon,270.0
+2026-01-07,Bureau,Mobilier,1.0,250.0,Marseille,250.0
+2026-01-09,Casque,Informatique,4.0,60.0,Lille,240.0
+2026-01-10,Etagere,Mobilier,2.0,75.0,Bordeaux,150.0
+2026-01-10,Ecran,Informatique,2.0,180.0,Paris,360.0
+2026-01-11,Chaise,Mobilier,2.0,90.0,Bordeaux,180.0
