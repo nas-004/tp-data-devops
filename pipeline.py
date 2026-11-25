@@ -27,6 +27,10 @@ def agreger_par_ville(df):
     resultat = df.groupby("ville", as_index=False)["montant"].sum()
     return resultat.sort_values("montant", ascending=False)
 
+def agreger_par_categorie(df):
+    """Calcule le chiffre d'affaires total par catégorie."""
+    resultat = df.groupby("categorie", as_index=False)["montant"].sum()
+    return resultat.sort_values("montant", ascending=False)
 
 def charger(df, chemin):
     """Écrit un DataFrame dans un fichier CSV."""
@@ -38,10 +42,13 @@ def main():
     brut = extraire(ENTREE)
     propre = transformer(brut)
     par_ville = agreger_par_ville(propre)
+    par_categorie = agreger_par_categorie(propre)
     charger(propre, SORTIE / "ventes_propres.csv")
     charger(par_ville, SORTIE / "ca_par_ville.csv")
+    charger(par_categorie, SORTIE / "ca_par_categorie.csv")
     print(f"{len(brut)} lignes lues, {len(propre)} lignes gardées.")
     print(par_ville.to_string(index=False, justify="left", formatters={"ville": "{:<10}".format}))
+    print(par_categorie.to_string(index=False, justify="left", formatters={"categorie": "{:<12}".format}))
 
 if __name__ == "__main__":
     main()
