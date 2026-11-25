@@ -30,3 +30,7 @@ jobs:
         with:
           name: resultats
           path: output/
+
+      - name: Construire une image
+        run: docker build -t pipeline-data .
+        
