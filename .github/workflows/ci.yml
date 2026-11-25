@@ -19,6 +19,9 @@ jobs:
       - name: Installer les dépendances
         run: pip install -r requirements.txt
 
+      - name: Vérifier la qualité du code
+        run: ruff check . 
+
       - name: Lancer les tests
         run: pytest -v
 
@@ -33,4 +36,4 @@ jobs:
 
       - name: Construire une image
         run: docker build -t pipeline-data .
-        
+      
